@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Google Text-To-Speech";
+}
+
+<div class="text-center">
+    <form target="_blank" method="post">
+        <div class="mb-3">
+            <label for="token_input" class="form-label">Token</label>
+            <input type="password" class="form-control" id="token_input" name="token" placeholder="your secure token" value="@Model.Token">
+        </div>
+        <div class="mb-3">
+            <label for="voice_input" class="form-label">Voice</label>
+            <input type="text" class="form-control" id="voice_input" name="voice" placeholder="en-US-Studio-M" value="en-US-Studio-M">
+        </div>
+        <div class="mb-3">
+            <label for="text_input" class="form-label">Text</label>
+            <textarea class="form-control" id="text_input" rows="9" name="text"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Создать</button>
+    </form>
+</div>
